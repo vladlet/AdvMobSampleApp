@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TableLayout
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:gravity="center_vertical"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <TableRow android:gravity="center_horizontal" >
+        <TextView
+            android:id="@+id/textView1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="column1"
+            android:layout_margin="1dp"
+            android:padding="10dp"
+            android:background="#ccc"
+            android:textAppearance="?android:attr/textAppearanceMedium" />
+
+        <TextView
+            android:id="@+id/textView2"
+            android:padding="10dp"
+            android:layout_margin="1dp"
+            android:background="#ccc"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="column2"
+            android:textAppearance="?android:attr/textAppearanceMedium" />
+
+        <TextView
+            android:id="@+id/textView3"
+            android:layout_width="wrap_content"
+            android:layout_margin="1dp"
+            android:padding="10dp"
+            android:background="#ccc"
+            android:layout_height="wrap_content"
+            android:text="column 3"
+            android:textAppearance="?android:attr/textAppearanceMedium"/>
+    </TableRow>
+    <TableRow android:gravity="center_horizontal" >
+        <TextView
+            android:id="@+id/textViewSpan"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="span three column"
+            android:gravity="center"
+            android:layout_margin="1dp"
+            android:padding="10dp"
+            android:background="#ccc"
+            android:layout_span = "3"
+            android:textSize="23sp"
+            android:textAppearance="?android:attr/textAppearanceMedium"/>
+    </TableRow>
+
+    <TableRow android:gravity="center_horizontal" >
+        <Button
+            android:id="@+id/backbutton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Back"
+            android:layout_span = "2"/>
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Empty"
+            android:layout_span = "2"/>
+    </TableRow>
+</TableLayout>
+

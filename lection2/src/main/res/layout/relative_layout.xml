@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent">
+
+    <Button
+        android:id="@+id/backbutton"
+        android:text="Back"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+    <TextView
+        android:id="@+id/firstName"
+        android:text="First Name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/backbutton" />
+    <EditText
+        android:id="@+id/editFirstName"
+        android:width="100px"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/firstName"
+        android:layout_below="@id/backbutton"/>
+    <EditText
+        android:id="@+id/editLastName"
+        android:width="100px"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/editFirstName"
+        android:layout_alignLeft="@id/editFirstName"/>
+    <TextView
+        android:id="@+id/lastName"
+        android:text="Last Name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline = "@id/editLastName"
+        android:layout_below="@id/editFirstName" />
+
+
+    <TextView
+        android:text="Bottom-Center"
+        android:textColor="#000"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        style="@android:style/TextAppearance.DeviceDefault.Large"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <TextView
+        android:text="Right-Center"
+        android:textColor="#000"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        style="@android:style/TextAppearance.DeviceDefault.Large"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+</RelativeLayout>

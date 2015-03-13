@@ -1,0 +1,6 @@
+<resources>
+    <string name="app_name">Lection2</string>
+    <string name="select_action">Push a button</string>
+    <string name="action_settings">Settings</string>
+    <string name="chooser_title">Sample of a chooser</string>
+</resources>
