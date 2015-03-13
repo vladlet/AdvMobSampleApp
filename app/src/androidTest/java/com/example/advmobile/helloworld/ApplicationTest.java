@@ -1,4 +1,4 @@
-package com.example.advmobile.helloword.anvmobsampleapp;
+package com.example.advmobile.helloworld;
 
 import android.app.Application;
 import android.test.ApplicationTestCase;

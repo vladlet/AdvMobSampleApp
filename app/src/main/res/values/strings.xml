@@ -1,6 +1,7 @@
 <resources>
-    <string name="app_name">AnvMobSampleApp</string>
+    <string name="app_name">HelloWorld</string>
 
+    <string name="welcom">Let\'s play a game</string>
     <string name="hello_world">Hello world!</string>
     <string name="action_settings">Settings</string>
 </resources>
