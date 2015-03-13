@@ -15,7 +15,7 @@ import java.util.concurrent.TimeUnit;
 
 public class ThreadActivity extends Activity implements View.OnClickListener {
 
-    StringBuffer _outBuffer = new StringBuffer(); // StringBuffer is tread-safe
+    static final StringBuffer _outBuffer = new StringBuffer(); // StringBuffer is tread-safe
     TextView _tv;
     ScrollView _scroller;
 
