@@ -4,13 +4,11 @@ import android.app.Activity;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.os.Handler;
-import android.text.method.ScrollingMovementMethod;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ScrollView;
 import android.widget.TextView;
 
-import java.nio.channels.AsynchronousCloseException;
 import java.util.Timer;
 import java.util.TimerTask;
 import java.util.concurrent.TimeUnit;
@@ -22,7 +20,6 @@ public class ThreadActivity extends Activity implements View.OnClickListener {
     ScrollView _scroller;
 
     static int _asyncTaskCount = 0;
-    static int _asyncTreadCount = 0;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
