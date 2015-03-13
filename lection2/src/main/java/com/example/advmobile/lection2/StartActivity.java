@@ -59,25 +59,32 @@ public class StartActivity extends Activity implements View.OnClickListener {
     @Override
     public void onClick(View v) {
         String str = ((Button)v).getText().toString();
-        if (str.equals("")) {
-            return;
-        } else if (str.equals("SendMessage")) {
-            // Explisit intent
-            Intent sendIntent = new Intent(Intent.ACTION_VIEW);
-            String title = getResources().getString(R.string.chooser_title);
-            Intent chooser = Intent.createChooser(sendIntent, title);
-            if (sendIntent.resolveActivity(getPackageManager()) != null) {
-                startActivity(chooser);
+        switch (str) {
+            case "":
+                break;
+            case "SendMessage":
+                // Explicit intent
+                Intent sendIntent = new Intent(Intent.ACTION_VIEW);
+                String title = getResources().getString(R.string.chooser_title);
+                Intent chooser = Intent.createChooser(sendIntent, title);
+                if (sendIntent.resolveActivity(getPackageManager()) != null) {
+                    startActivity(chooser);
+                }
+                break;
+            case "Treads": {
+                Intent intent = new Intent(this, ThreadActivity.class);
+                startActivity(intent);
+                break;
             }
-        } else if (str.equals("Treads")) {
-            //Intent intent = new Intent(this, TreadActivity.class);
-            //startActivity(intent);
-        } else {
-            Intent intent = new Intent(this, LayoutActivity.class);
-            Log.d("StartActivity", "Start " + str + " " + buttons.indexOf(str) + " " + layouts[buttons.indexOf(str)]);
-            intent.putExtra("activity_type", layouts[buttons.indexOf(str)]);
-            intent.putExtra("activity_type_name", str);
-            startActivity(intent);
+            default: {
+                // Implicit intent
+                Intent intent = new Intent(this, LayoutActivity.class);
+                Log.d("StartActivity", "Start " + str + " " + buttons.indexOf(str) + " " + layouts[buttons.indexOf(str)]);
+                intent.putExtra("activity_type", layouts[buttons.indexOf(str)]);
+                intent.putExtra("activity_type_name", str);
+                startActivity(intent);
+                break;
+            }
         }
     }
 
